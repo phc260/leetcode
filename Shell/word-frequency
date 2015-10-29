@@ -1,0 +1,2 @@
+# Read from the file words.txt and output the word frequency list to stdout.
+tr < words.txt -cs  "[a-z]" "\n" | sort | uniq -c | sort -gr | awk '{print $2,$1}'
